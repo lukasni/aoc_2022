@@ -1,7 +1,7 @@
 defmodule AdventOfCode.Day01 do
   def part1(input) do
     input
-    |> AdventOfCode.parse_lines()
+    |> AdventOfCode.parse_lines(trim: false)
     |> Enum.chunk_by(&(&1 == ""))
     |> Enum.reject(&(&1 == [""]))
     |> Enum.map(&to_int_list/1)
@@ -11,7 +11,7 @@ defmodule AdventOfCode.Day01 do
 
   def part2(input) do
     input
-    |> AdventOfCode.parse_lines()
+    |> AdventOfCode.parse_lines(trim: false)
     |> Enum.chunk_by(&(&1 == ""))
     |> Enum.reject(&(&1 == [""]))
     |> Enum.map(&to_int_list/1)

@@ -25,7 +25,6 @@ defmodule AdventOfCode.Day02 do
   def part1(input) do
     input
     |> AdventOfCode.parse_lines()
-    |> Enum.reject(&(&1 == ""))
     |> Enum.map(&Map.get(@score_map_1, &1))
     |> Enum.sum()
   end
@@ -33,7 +32,6 @@ defmodule AdventOfCode.Day02 do
   def part2(input) do
     input
     |> AdventOfCode.parse_lines()
-    |> Enum.reject(&(&1 == ""))
     |> Enum.map(&Map.get(@score_map_2, &1))
     |> Enum.sum()
   end

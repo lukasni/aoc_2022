@@ -2,7 +2,6 @@ defmodule AdventOfCode.Day03 do
   def part1(input) do
     input
     |> AdventOfCode.parse_lines()
-    |> Stream.reject(&(&1 == ""))
     |> Stream.map(&to_charlist/1)
     |> Stream.map(&split/1)
     |> Stream.map(&find_misplaced/1)
@@ -13,7 +12,6 @@ defmodule AdventOfCode.Day03 do
   def part2(input) do
     input
     |> AdventOfCode.parse_lines()
-    |> Stream.reject(&(&1 == ""))
     |> Stream.map(&to_charlist/1)
     |> Stream.map(&MapSet.new/1)
     |> Stream.chunk_every(3)

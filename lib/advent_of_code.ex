@@ -3,8 +3,8 @@ defmodule AdventOfCode do
   Documentation for AdventOfCode.
   """
 
-  def parse_lines(input) do
+  def parse_lines(input, opts \\ [trim: true]) do
     input
-    |> String.split("\n")
+    |> String.split("\n", opts)
   end
 end
