@@ -84,8 +84,7 @@ defmodule AdventOfCode.Input do
 
   defp headers,
     do: [
-      {'user-agent',
-       'github.com/lukasni/aoc_2022 by niederbergerlukas@gmail.com'},
+      {'user-agent', 'github.com/lukasni/aoc_2022 by niederbergerlukas@gmail.com'},
       {'cookie', String.to_charlist("session=" <> Keyword.get(config(), :session_cookie))}
     ]
 end

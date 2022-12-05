@@ -5,10 +5,11 @@ defmodule AdventOfCode.Day02Test do
 
   test "part1" do
     input = """
-            A Y
-            B X
-            C Z
-            """
+    A Y
+    B X
+    C Z
+    """
+
     result = part1(input)
 
     assert result == 15
@@ -16,10 +17,11 @@ defmodule AdventOfCode.Day02Test do
 
   test "part2" do
     input = """
-            A Y
-            B X
-            C Z
-            """
+    A Y
+    B X
+    C Z
+    """
+
     result = part2(input)
 
     assert result == 12
