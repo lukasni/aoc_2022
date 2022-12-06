@@ -13,12 +13,13 @@ defmodule AdventOfCode.Day06 do
 
   def find_marker(input, length) do
     input
-    |> Enum.chunk_every(length,1)
+    |> Enum.chunk_every(length, 1)
     |> Enum.with_index(length)
     |> Enum.find_value(fn {list, index} ->
       case has_duplicates?(list) do
         true ->
           nil
+
         false ->
           index
       end
