@@ -3,19 +3,35 @@ defmodule AdventOfCode.Day06Test do
 
   import AdventOfCode.Day06
 
-  @tag :skip
-  test "part1" do
-    input = nil
-    result = part1(input)
+  @p1_inputs [
+    {"mjqjpqmgbljsphdztnvjfqwrcgsmlb", 7},
+    {"bvwbjplbgvbhsrlpgdmjqwftvncz", 5},
+    {"nppdvjthqldpwncqszvftbrmjlhg", 6},
+    {"nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 10},
+    {"zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 11}
+  ]
 
-    assert result
+  @p2_inputs [
+    {"mjqjpqmgbljsphdztnvjfqwrcgsmlb", 19},
+    {"bvwbjplbgvbhsrlpgdmjqwftvncz", 23},
+    {"nppdvjthqldpwncqszvftbrmjlhg", 23},
+    {"nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 29},
+    {"zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 26}
+  ]
+
+  test "part1" do
+    for {input, expected} <- @p1_inputs do
+      result = part1(input)
+
+      assert result == expected
+    end
   end
 
-  @tag :skip
   test "part2" do
-    input = nil
-    result = part2(input)
+    for {input, expected} <- @p2_inputs do
+      result = part2(input)
 
-    assert result
+      assert result == expected
+    end
   end
 end
